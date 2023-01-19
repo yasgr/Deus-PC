@@ -18,6 +18,17 @@ eCommerce-like website project made with:
  
 
 
+## HOME PAGE:
 
 ![proyecto-home](https://user-images.githubusercontent.com/95076842/213441446-83e31063-f35d-4640-8111-b94be58bcc17.jpg)
+
+## ADMIN CONTROL PANEL:
+
+![admin-panel](https://user-images.githubusercontent.com/95076842/213450058-5b1972ac-d06e-46b2-ba5b-96924e1049fe.jpg)
+
+### Store
+
+![store](https://user-images.githubusercontent.com/95076842/213450718-ddbf82c1-3143-4ec2-a42c-59d938653abd.jpg)
+
+
 
