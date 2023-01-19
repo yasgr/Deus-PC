@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap');
+
+/*defino las clases que voy a utilizar*/
+:root{
+    --morado: #c544e6;
+    --blanco:#fff;
+    --negro:#444;
+    --rojo:  rgb(255, 47, 47);
+    --naranja: rgb(255, 153, 0);
+    --border: .2rem solid var(--negro);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --blanco-bg:#d7d7d7;
+    --gris:#777;
+    --blancoclaro:rgb(235, 235, 235);
+    --azul:rgb(0, 145, 255);
+ }
+/*Todo*/
+*{
+    font-family: 'Lexend', sans-serif;
+    margin:0; 
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+*::selection{
+    color:var(--blanco);
+    background-color: var(--morado);
+}
+/*estilos de la barra lateral*/
+::-webkit-scrollbar{
+    width: 1rem;
+    height: .5rem;
+}
+::-webkit-scrollbar-track{
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--morado);
+}
+/*toda la página*/
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+}
+/*todo el body*/
+body{
+    background-color: var(--blanco-bg);
+}
+/*sección */
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:2rem ;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   padding:1rem 3rem;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+   color:var(--white);
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--negro);
+}
+
+.btn{
+   background-color: var(--morado);
+}
+
+.option-btn{
+   background-color: var(--naranja);
+}
+
+.delete-btn{
+   background-color: var(--rojo);
+}
+
+
+
+/*MENSAJE*/
+.mensaje{
+    position: sticky;
+    top:0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--blanco-bg);
+    padding:1rem;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+}
+.mensajedos{
+    position: sticky;
+    top:0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--blanco-bg);
+    padding:1rem;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+}
+
+.mensaje span{
+    font-size: 2rem;
+    color:var(--rojo);
+    cursor: pointer;
+}
+.mensajedos span{
+    font-size: 2rem;
+    color: green;
+    cursor: pointer;
+}
+.mensaje i:hover{
+    color: var(--negro);
+}
+.mensajedos i:hover{
+    color: var(--negro);
+}
+
+ .heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color:var(--negro);
+    font-size: 4rem;
+ }
+/*producto no añadido*/
+ .vacio{
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:var(--rojo);
+    box-shadow: var(--box-shadow);
+ }
+
+/*clase contenedor de la sección*/
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;/*viewport height*/
+}
+.form-container form{
+    background-color: var(--blanco);
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    text-align: center;
+    width:50rem;
+}
+/*INICIA SESION*/
+.form-container form h3{
+    font-size: 2.5rem;
+    color:var(--negro);
+    text-transform: uppercase;
+}
+/*texto*/
+.form-container form p{
+    margin:1rem 0;
+    font-size: 2rem;
+    color:var(--gris);
+}
+/*claves*/
+.form-container form p span{
+ color:var(--naranja);
+}
+/*caja*/
+.form-container form .box{
+    width: 100%;
+    background-color: var(--blanco-bg);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--morado);
+    margin:1rem 0;
+    border:var(--border);
+    font-size:1.8rem;
+    border-radius: .5rem;
+}
+/*header panel admin */
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: var(--blanco);
+    box-shadow:  var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ }
+/* logo=Panel del administrador*/
+ .header .flex .logo{
+    font-size:2rem;
+    color:var(--morado);
+    font-weight: 900;
+ }
+/*PC DEL DEUS PC*/
+ .header .flex .logo span{
+    font-size:2rem;
+    color:var(--negro);
+ }
+/*encabezados*/
+.header .flex .navbar a{
+    margin:0 1rem;
+    font-size:1.5rem;
+    color:var(--negro);
+}
+
+.header .flex .navbar a:hover{
+color:var(--morado);
+text-decoration: underline;
+}
+/*iconos menu*/
+.header .flex .icons > *{
+font-size: 2.5rem;
+cursor: pointer;
+color:var(--gris);
+margin-left: .5rem;
+}
+.header .flex .icons > *{
+    color:var(--morado);
+}
+  
+    /*menu*/
+.header .flex .perfil{
+    position:absolute;
+    top:125%; right:2rem;
+    background-color: var(--blanco);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    padding-top:1rem;
+    display: none;
+    animation: fadeIn .2s linear;
+    
+}
+/*animación slide*/
+@keyframes fadeIn{
+    0%{
+        transform: translateY(-1.2rem);
+    }
+}
+/*admin dentro de caja de menu*/
+.header .flex .perfil p{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--naranja);
+    width:30rem;
+
+}
+/*onclick user*/
+.header .flex .perfil.active{
+    display: inline-block;
+}
+#menu-btn{
+    display: none;
+}
+
+.pagprincipal .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(auto, 270px));
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+ }
+ 
+ .pagprincipal .box-container .box{
+    padding:2rem;
+    text-align: center;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background-color:rgb(231, 231, 231);
+ }
+
+ .pagprincipal .box-container h3{
+    font-size: 2.7rem;
+    color:var(--negro);
+ }
+
+ .pagprincipal .box-container span{
+    font-size: 2rem;
+    
+ }
+
+ .pagprincipal .box-container .box p{
+    padding:1.2rem;
+    border-radius: .5rem;
+    background-color: var(--naranja);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color:black;
+    margin: 1rem 0;
+ }
+
+/* form de añadir productos */
+ .anadirproductos form{
+    margin:0 auto;
+    max-width: 70rem;
+    background-color: var(--naranja);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+ }
+ .anadirproductos form .flex{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    padding: 2rem;
+
+ }
+ .anadirproductos form .flex .inputBox {
+    flex: 1 1 30rem;
+    
+ }
+
+ .anadirproductos form .flex .inputBox .box{
+    width:100%;
+    border: var(--border);
+    width: 100%;
+    background-color: var(--blancoclaro);
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    color:var(--morado);
+
+ }
+ .anadirproductos form .flex .inputBox span{
+    font-size: 2rem;
+ }
+ .anadirproductos form .flex .inputBox textarea{
+    height: 5.75rem;
+    resize: none; /*para que no descuadre lo fijo*/
+ 
+ }
+/* mostrar productos */
+.muestra-productos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40rem);
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.muestra-productos .box-container .box{
+    background-color: var(--blancoclaro);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:1.5rem;
+}
+.muestra-productos .box-container .box img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain; /*cover- para todoel hueco */
+    margin-bottom: 1rem;
+}
+
+/* nombre, precio y detalles de producto */
+.muestra-productos .box-container .box .name{
+    font-size: 2rem;
+    color:var(--negro);
+}
+.muestra-productos .box-container .box .precio{
+    font-size: 2.5rem;
+    color:var(--morado);
+    margin: 1rem 0;
+}
+.muestra-productos .box-container .box .detalles{
+    font-size: 1.4rem;
+    color:var(--negro);
+}
+/*ACTUALIZAR PRODUCTO*/
+.actualiza-producto form{
+    margin:0 auto;
+    max-width: 50rem;
+    background-color: var(--blancoclaro);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding: 2rem;    
+}
+/*imagen principal*/
+.actualiza-producto form .img-container .img-principal img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+}
+/*formato imagenes pequeñas*/
+.actualiza-producto form .img-container .img-secundarias{
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+/*imagenes pequeñas*/
+.actualiza-producto form .img-container .img-secundarias img{
+    height: 6rem;
+    width: 8rem;
+    object-fit: contain;
+    border: var(--border);
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: .2s linear;
+}
+.actualiza-producto form .img-container .img-secundarias img:hover{
+    transform: scale(1.1);
+}
+.actualiza-producto form .box{/*copiado de la seccion form de añadir productos*/
+    width:100%;
+    border: var(--border);
+    width: 100%;
+    background-color: var(--blancoclaro);
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    color:var(--morado);
+    
+}
+.actualiza-producto form textarea{
+    height: 15rem;
+}
+.actualiza-producto form span{
+    font-size: 1.7rem;
+    color: var(--negro);
+    
+}
+
+/*Apartado @media, para hacer el responsive de la página*/
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+/*oton 3 rayas y menu*/
+    #menu-btn{
+        display: inline-block;
+     } 
+     .header .flex .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: var(--blanco);
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+     }
+  /*Cuando se active el onclick, boton 3 rayas menu*/
+/*herramienta https://bennettfeely.com/clippy/*/
+     .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }  
+     .header .flex .navbar a{
+        display: block;
+        margin:2rem;
+     }
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    } 
+    .flex-btn{
+        flex-flow: column;
+        gap:0;
+    }
+    .heading{   
+        font-size: 3rem;
+     }
+    .muestra-productos .box-container{
+       grid-template-columns: 1fr; 
+    }
+}
+}
