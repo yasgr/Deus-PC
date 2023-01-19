@@ -52,7 +52,7 @@ include '../../proyecto/elementos/conexion.php';
         <section class="form-container">
             <form action="" method="post">
                 <h3>Inicia Sesión</h3>
-                <!--SIGNO DE INTERROGACION<p style='cursor:help;'> <abbr title="Así se pone un signo de interrogación">Información adicional</abbr></p>SIGNO DE INTERROGACION-->
+              
                 <input type="text" name="name" maxlength="20" required 
                 placeholder = "Introduce tu nombre de usuario:" class="box" 
                 oninput="this.value = this.value.replace(/\s/g, '')">
